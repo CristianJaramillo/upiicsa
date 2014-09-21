@@ -26,7 +26,6 @@ return array(
 	|
 	*/
 
-	// 'url' => 'http://upiicsa.esy.es',
 	'url' => 'http://upiicsa',
 
 	/*

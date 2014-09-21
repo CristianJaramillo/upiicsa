@@ -35,6 +35,10 @@ class PageTableSeeder extends Seeder {
 				'name'        => 'candidato',
 				'app'         => 'apps.category.user',
 			],
+			[
+				'name'        => 'equipo',
+				'app'         => 'apps.category.team',
+			],
 		];
 
 		foreach ($pages as $page) {

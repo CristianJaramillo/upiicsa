@@ -24,6 +24,9 @@ textarea { resize:none; }
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
 }
+.error-message{
+  color: #F4645F;
+}
 .facebook{
   background-image: url(../../img/facebook.png);
 }

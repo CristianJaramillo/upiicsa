@@ -23,6 +23,8 @@ Route::group(array('before' => 'csrf'), function(){
 
 Route::get('candidatos', array('as' => 'users', 'uses' => 'HomeController@users'));
 
+Route::get('equipo/{id}', ['as' => 'team', 'uses' => 'HomeController@team']);
+
 Route::get('carrera/{slug}/{id}', ['as' => 'category', 'uses' => 'HomeController@category']);	
 
 Route::get('candidato/{slug}/{id}', ['as' => 'user', 'uses' => 'HomeController@user']);

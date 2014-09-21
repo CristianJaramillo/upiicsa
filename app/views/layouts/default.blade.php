@@ -71,6 +71,51 @@
                 <li><a class="ease" href="{{ route('users') }}">Todos</a></li>
               </ul>
             </li>
+            <li class="ease dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Equipos<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="ease" href="{{ route('team', [1]) }}">
+                    Equipo 1
+                  </a>
+                </li>
+                <li>
+                  <a class="ease" href="{{ route('team', [2]) }}">
+                    Equipo 2
+                  </a>
+                </li>
+                <li>
+                  <a class="ease" href="{{ route('team', [3]) }}">
+                    Equipo 3
+                  </a>
+                </li>
+                <li>
+                  <a class="ease" href="{{ route('team', [4]) }}">
+                    Equipo 4
+                  </a>
+                </li>
+                <li>
+                  <a class="ease" href="{{ route('team', [5]) }}">
+                    Equipo 5
+                  </a>
+                </li>
+                <li>
+                  <a class="ease" href="{{ route('team', [6]) }}">
+                    Equipo 6
+                  </a>
+                </li>
+                <li>
+                  <a class="ease" href="{{ route('team', [7]) }}">
+                    Equipo 7
+                  </a>
+                </li>
+                <li>
+                  <a class="ease" href="{{ route('team', [8]) }}">
+                    Equipo 8
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li><a class="ease" href="#">Contacto</a></li>
           </ul>
         </div>

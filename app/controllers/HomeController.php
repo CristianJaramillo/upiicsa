@@ -36,6 +36,22 @@ class HomeController extends BaseController {
 	}
 
 	/**
+	 * GET /equipo/{id}
+	 *
+	 * @return \View
+	 */
+	public function team($id){
+	
+		$team = User::where('team', $id)->get();
+	
+		$this->notFoundUnless($team);
+
+		$page = $this->getPage('equipo');
+
+		return View::make($this->layout, compact('team', 'page', 'id'));
+	}
+
+	/**
 	 * GET /carrera/{name}/{id}
 	 *
 	 * @return \View

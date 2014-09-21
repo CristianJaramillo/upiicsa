@@ -12,11 +12,11 @@
 				@endif
 
 				{{-- FULL NAME --}}
-				{{ Field::text('full_name', NULL, ['id' => 'full_name', 'required']) }}
+				{{ Field::text('full_name', NULL, ['id' => 'full_name', 'pattern' => '[A-Za-z ]{3,50}','title' => 'Escriba su nombre', 'required']) }}
 				{{-- EMAIL --}}
-				{{ Field::email('email', NULL, ['id' => 'email', 'required']) }}
+				{{ Field::email('email', NULL, ['id' => 'email', 'pattern' => '{4,320}', 'required']) }}
 				{{-- CONFIRM EMAIL --}}
-				{{ Field::email('email_confirmation', NULL,['id' => 'email_confirmation', 'required']) }}
+				{{ Field::email('email_confirmation', NULL,['id' => 'email_confirmation', 'pattern' => '{4,320}', 'required']) }}
 				{{-- SEX --}}
 				{{ Field::select('sex', ['F' => 'Femenino','M' => 'Masculino'], NULL, ['id' => 'sex', 'required']) }}
 				{{-- TEAM --}}
@@ -24,7 +24,7 @@
 				{{-- CATEGORY --}}
 				{{ Field::select('category_id', $categories, NULL, ['id' => 'category_id', 'required']) }}
 				{{-- QUESTION-1 --}}
-				{{ Field::textarea('question_1', NULL, ['rows' => '3', 'required']) }}
+				{{ Field::textarea('question_1', NULL, ['rows' => '3', 'pattern' => '[A-Za-z0-9 ]{50,200}', 'title' => 'Escribe almenos 50 car&aacute;cteres','required']) }}
 				{{-- QUESTION-2 --}}
 				{{ Field::select('question_2', ['Lider' => 'Lider', 'Cerebro' => 'Cerebro', 'Investigador' => 'Investigador', 'Iniciador' => 'Iniciador', 'Segidor' => 'Segidor', 'Ninguno' => 'Ninguno'], NULL, ['required']) }}
 				{{-- QUESTION-3 --}}
@@ -32,7 +32,7 @@
 				{{-- QUESTION-4 --}}
 				{{ Field::select('question_4', ['Si' => 'Si', 'No' => 'No'], NULL, ['required']) }}
 				{{-- QUESTION-5 --}}
-				{{ Field::textarea('question_5', NULL, ['rows' => '3', 'required']) }}
+				{{ Field::textarea('question_5', NULL, ['rows' => '3', 'pattern' => '[A-Za-z0-9 ]{50,200}', 'title' => 'Escribe almenos 50 car&aacute;cteres','required']) }}
 				{{-- QUESTION-6 --}}
 				{{ Field::select('question_6', ['Facebook' => 'Facebook', 'Whatsapp' => 'Whatsapp', 'Twitter' => 'Twitter', 'Correo Electrónico' => 'Correo Electrónico', 'Skype' => 'Skype', 'Ninguno' => 'Ninguno'], NULL, ['required']) }}
 				{{-- QUESTION-7 --}}
