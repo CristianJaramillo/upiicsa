@@ -1,9 +1,6 @@
 {{-- APLICATION REGISTER --}}
 @section('app')
-	
-	<div class="container" style="margin-top:52px;">
-		
-		<h1>Estudio por individuo</h1>
+	<h1>Registros</h1>
 
 		<table class="table table-bordered table-striped">
 			<thead>
@@ -25,16 +22,14 @@
 			            <td>{{ $user->category->name }}</td>
 			            <td>Equipo {{ $user->team }}</td>
 			            <td width="50">
-			                <a href="" class="btn btn-info">
-			                    Ver
-			                </a>
-			            </td>
+                            <a href="{{ route('user', [\Str::slug($user->full_name), $user->id]) }}" class="btn btn-primary">
+                                Ver
+                            </a>
+                        </td>
 			        </tr>
 			    @endforeach
 
 			</tbody>
 
 		</table>	
-	</div>
-
 @endsection

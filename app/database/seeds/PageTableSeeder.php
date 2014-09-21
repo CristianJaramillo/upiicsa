@@ -20,6 +20,10 @@ class PageTableSeeder extends Seeder {
 				'app'         => 'apps.home.sing-up',
 			],
 			[
+				'name'        => 'users',
+				'app'         => 'apps.home.users',
+			],
+			[
 				'name'        => 'candidatos',
 				'app'         => 'apps.home.users',
 			],

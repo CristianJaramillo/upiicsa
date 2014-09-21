@@ -21,7 +21,7 @@
                 	<td>{{ $user->sex }}</td>
                     <td>{{{ $user->question_1 }}}</td>
                     <td width="50">
-                        <a href="{{ route('user', [\Str::slug($user->full_name), $user->category_id]) }}" class="btn btn-primary">
+                        <a href="{{ route('user', [\Str::slug($user->full_name), $user->id]) }}" class="btn btn-primary">
                             Ver
                         </a>
                     </td>

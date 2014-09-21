@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration {
 			// Datos pernonales
 			$table->string('full_name');
 			$table->string('email')->unique();
-			$table->enum('sex', ['1', '2', '3', '4', '5', '6', '7', '8']);
 			$table->enum('sex', ['M', 'F']);
+			$table->enum('team', ['1', '2', '3', '4', '5', '6', '7', '8']);
 			$table->integer('category_id')->unsigned();
 			$table->foreign('category_id')->references('id')->on('categories');
 			// Que entiendes por organización?

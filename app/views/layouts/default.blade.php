@@ -68,6 +68,7 @@
                 <li><a class="ease" href="{{ route('category', [\Str::slug('Lic. en Ingeniería en Industrial'), 3]) }}">Ingeniería en Industrial</a></li>
                 <li><a class="ease" href="{{ route('category', [\Str::slug('Lic. en Ingeniería en Informática'), 4]) }}">Ingeniería en Informática</a></li>
                 <li><a class="ease" href="{{ route('category', [\Str::slug('Lic. en Ingeniería en Transportes'), 5]) }}">Ingeniería en Transportes</a></li>
+                <li><a class="ease" href="{{ route('users') }}">Todos</a></li>
               </ul>
             </li>
             <li><a class="ease" href="#">Contacto</a></li>
