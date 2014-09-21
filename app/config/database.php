@@ -52,14 +52,25 @@ return array(
 			'prefix'   => '',
 		),
 
+		// 'mysql' => array(
+			// 'driver'    => 'mysql',
+			// 'host'      => 'localhost',
+			// 'database'  => 'u865675134_upiic',
+			// 'username'  => 'u865675134_root',
+			// 'password'  => 'upiicsa454_',
+			// 'charset'   => 'latin1',
+			// 'collation' => 'latin1_spanish_ci',
+			// 'prefix'    => '',
+		// ),
+
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
+			'database'  => 'upiicsa',
+			'username'  => 'root',
 			'password'  => '',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
+			'charset'   => 'latin1',
+			'collation' => 'latin1_spanish_ci',
 			'prefix'    => '',
 		),
 

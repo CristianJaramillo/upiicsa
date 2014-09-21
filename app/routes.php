@@ -11,7 +11,18 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('start');
+Route::get('/', array('as' => 'home', 'uses' => 'HomeController@home'));
+
+Route::get('sing-up', array('as' => 'sing-up', 'uses' => 'HomeController@singUp'));
+
+Route::group(array('before' => 'csrf'), function(){
+
+	Route::post('/', array('as' => 'register', 'uses' => 'HomeController@register'));
+		
 });
+
+Route::get('candidatos', array('as' => 'users', 'uses' => 'HomeController@users'));
+
+Route::get('carrera/{slug}/{id}', ['as' => 'category', 'uses' => 'HomeController@category']);	
+
+Route::get('candidato/{slug}/{id}', ['as' => 'user', 'uses' => 'HomeController@user']);

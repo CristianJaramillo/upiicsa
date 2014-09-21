@@ -53,6 +53,17 @@ App::error(function(Exception $exception, $code)
 
 /*
 |--------------------------------------------------------------------------
+| Application Error Register Handler
+|--------------------------------------------------------------------------
+|
+*/
+
+App::error(function (\Component\Manager\ValidationException $exception) {
+    return Redirect::back()->withInput()->withErrors($exception->getErrors());
+});
+
+/*
+|--------------------------------------------------------------------------
 | Maintenance Mode Handler
 |--------------------------------------------------------------------------
 |

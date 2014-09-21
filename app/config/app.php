@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,8 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	// 'url' => 'http://upiicsa.esy.es',
+	'url' => 'http://upiicsa',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +40,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'America/Mexico_City',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +53,7 @@ return array(
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => 'es',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +79,7 @@ return array(
 	|
 	*/
 
-	'key' => 'Ih8uNY5VJB0oysGdoCMWKcCv8wjsq9pM',
+	'key' => 'JWKggVf8MzXhzrb6EVNFrcBSJ65IIbXw',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -121,6 +122,12 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+
+		// Custom
+        'Component\Field\FieldServiceProvider',
+
+		'Way\Generators\GeneratorsServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 	),
 
@@ -188,6 +195,12 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+
+		// Custom
+        'Field'           => 'Component\Field\Field',
+
+		// Debugbar
+        'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 	),
 
