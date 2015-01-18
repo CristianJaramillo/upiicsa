@@ -4,27 +4,33 @@
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
 */
 
-Route::get('/', array('as' => 'home', 'uses' => 'HomeController@home'));
+/*
+ |--------------------------------------------------------------------------
+ | GUEST PUBLIC GROUP ROUTES
+ |--------------------------------------------------------------------------
+ */
+Route::group(array('before' => array('guest')), function(){
 
-Route::get('sing-up', array('as' => 'sing-up', 'uses' => 'HomeController@singUp'));
+	/*
+	 | WELCOME ROUTE
+	 */
+	Route::get('/', array('as' => 'welcome', 'uses' => 'HomeController@index'));
 
-Route::group(array('before' => 'csrf'), function(){
+	/*
+	 | TEAM ROUTE
+	 */
+	Route::get('team/{id}', array('as' => 'team', 'uses' => 'HomeController@team'));
 
-	Route::post('/', array('as' => 'register', 'uses' => 'HomeController@register'));
-		
+	/*
+	 | CSRF SECURITY ROUTES
+	 */
+	Route::group(array('before' => 'csrf'), function(){
+		/*
+		 | REGISTER ROUTE
+		 */
+		 Route::post('/', ['as' => 'register', 'uses' => 'HomeController@register']);
+	});
+
 });
-
-Route::get('candidatos', array('as' => 'users', 'uses' => 'HomeController@users'));
-
-Route::get('equipo/{id}', ['as' => 'team', 'uses' => 'HomeController@team']);
-
-Route::get('carrera/{slug}/{id}', ['as' => 'category', 'uses' => 'HomeController@category']);	
-
-Route::get('candidato/{slug}/{id}', ['as' => 'user', 'uses' => 'HomeController@user']);

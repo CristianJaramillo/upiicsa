@@ -2,6 +2,8 @@
 
 // Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
+use UPIICSA\Entities\Category;
+use UPIICSA\Entities\User;
 
 class UserTableSeeder extends Seeder {
 
@@ -26,13 +28,13 @@ class UserTableSeeder extends Seeder {
 		$question_9  = ['Siempre', 'Constantemente', 'Eventualmente', 'Poco', 'Nunca'];
 		$question_10 = ['Siempre', 'Constantemente', 'Eventualmente', 'Poco', 'Nunca'];
 
-		foreach (range(1, 70) as $index) {
+		foreach (range(1, 40) as $index) {
 			
 			$user = new User();
 		
 			$user->full_name    = $faker->name;
 			$user->email        = $faker->email;
-			$user->team          = $faker->randomElement($team);
+			$user->team_id      = $faker->randomElement($team);
 			$user->sex          = $faker->randomElement($sex);
 
 			$user->category_id  = $faker->randomElement($categories);

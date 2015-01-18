@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'upiicsa',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'u865675134_upiic',
+			'username'  => 'u865675134_root',
+			'password'  => 'upiicsa454_',
 			'charset'   => 'latin1',
 			'collation' => 'latin1_spanish_ci',
 			'prefix'    => '',

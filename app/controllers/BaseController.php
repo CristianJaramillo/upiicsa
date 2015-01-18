@@ -1,7 +1,8 @@
 <?php
 
-class BaseController extends Controller {
+use UPIICSA\Repositories\PageRepo;
 
+class BaseController extends Controller {
 
 	/**
 	 * Default Layout
@@ -49,20 +50,24 @@ class BaseController extends Controller {
 	}
 
 	/**
-	 * @return object Report\Repositories\PageRepo
-	 */
-	protected function getPage($page)
-	{
-		return Page::current($page)->first();
-	}
-
-	/**
 	 * @return
 	 */
 	public function notFoundUnless($value)
     {
         if ( ! $value) return "Not Found Unless";
     }
+
+	/**
+	 * @return void
+	 */
+	protected function setupPage()
+	{
+		$page = new PageRepo();
+		$type = Auth::check() ? 'private' : 'public';
+		$page = $page->current(Route::currentRouteName(), $type);
+		if(is_object($page)) $this->addParam('page', $page);
+		unset($page);
+	}
 
 	/**
 	 * Setup the layout used by the controller.
@@ -73,8 +78,8 @@ class BaseController extends Controller {
 	{
 		if ( ! is_null($this->layout))
 		{
-			if (empty($this->params)) {
-				$this->addParam('page', $this->getPage(\Route::currentRouteName()));
+			if (empty($this->params) && !Request::is('logout') && !Request::ajax()) {
+				// $this->addParam('page', $this->getPage());
 			}
 		}
 	}
@@ -82,7 +87,7 @@ class BaseController extends Controller {
 	/**
 	 * @return \View
 	 */
-	protected function show()
+	protected function index()
 	{
 		return View::make($this->layout, $this->params);
 	}

@@ -13,7 +13,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-            "Component\\": "app/Component"
+            "UPIICSA\\": "app/UPIICSA"
         },
 		"classmap": [
 			"app/commands",

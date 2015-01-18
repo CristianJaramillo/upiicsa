@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration {
 			$table->string('full_name');
 			$table->string('email')->unique();
 			$table->enum('sex', ['M', 'F']);
-			$table->enum('team', ['1', '2', '3', '4', '5', '6', '7', '8']);
+			$table->enum('team_id', ['1', '2', '3', '4', '5', '6', '7', '8']);
 			$table->integer('category_id')->unsigned();
 			$table->foreign('category_id')->references('id')->on('categories');
 			// Que entiendes por organización?
@@ -38,11 +38,11 @@ class CreateUsersTable extends Migration {
 			// Cual de estos programas usas normalmente para 
 			// la elaboración de tu tus trabajos?
 			$table->enum('question_7', ['Word', 'PowerPoint', '', 'Excel', 'Ninguno'])->default('Ninguno');
-			//
+			// Tu aportación fue valorada por tus compañeros?
 			$table->enum('question_8', ['Si', 'No']);
-			//
+			// La comunicación en el equipo fue buena?
 			$table->enum('question_9', ['Siempre', 'Constantemente', 'Eventualmente', 'Poco', 'Nunca'])->default('Nunca');
-			//
+			// Te sientes satisfecho con el trabajo de tu equipo?
 			$table->enum('question_10', ['Siempre', 'Constantemente', 'Eventualmente', 'Poco', 'Nunca'])->default('Nunca');
 			// Ultima modificación.
 			$table->timestamps();

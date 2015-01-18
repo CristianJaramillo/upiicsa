@@ -58,8 +58,8 @@ App::error(function(Exception $exception, $code)
 |
 */
 
-App::error(function (\Component\Manager\ValidationException $exception) {
-    return Redirect::back()->withInput()->withErrors($exception->getErrors());
+App::error(function (\UPIICSA\Manager\ValidationException $exception) {
+    return Redirect::to('/#registro')->withInput()->withErrors($exception->getErrors());
 });
 
 /*

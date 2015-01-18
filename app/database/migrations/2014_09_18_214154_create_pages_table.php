@@ -18,7 +18,12 @@ class CreatePagesTable extends Migration {
 			$table->increments('id');
 			$table->string('name')->unique();
 			$table->string('layout')->default('layouts.default');
-			$table->string('app')->default('apps.default');
+			$table->string('lang', 10)->default('es-MX');
+			$table->string('title')->default('Title');
+			$table->string('description')->default('Description');
+			$table->string('author');
+			$table->string('app')->default('apps.default')->nullable();
+			$table->enum('type', ['private', 'public'])->default('public');
 			$table->timestamps();
 		});
 	}

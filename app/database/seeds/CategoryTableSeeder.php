@@ -1,5 +1,7 @@
 <?php
 
+use UPIICSA\Entities\Category;
+
 class CategoryTableSeeder extends Seeder {
 
 	public function run()
@@ -12,7 +14,7 @@ class CategoryTableSeeder extends Seeder {
 				'name' => 'Lic. en Ciencias de la Informática'
 			],
 			[
-				'name' => 'Lic. en Ingeniería en Industrial'
+				'name' => 'Lic. en Ingeniería Industrial'
 			],
 			[
 				'name' => 'Lic. en Ingeniería en Informática'

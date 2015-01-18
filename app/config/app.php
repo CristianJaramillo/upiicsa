@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://upiicsa',
+	'url' => 'http://upiicsa.esy.es',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -123,7 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		// Custom
-        'Component\Field\FieldServiceProvider',
+        'UPIICSA\Field\FieldServiceProvider',
 
 		'Way\Generators\GeneratorsServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
@@ -196,7 +196,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
 		// Custom
-        'Field'           => 'Component\Field\Field',
+        'Field'           => 'UPIICSA\Field\Field',
 
 		// Debugbar
         'Debugbar' => 'Barryvdh\Debugbar\Facade',

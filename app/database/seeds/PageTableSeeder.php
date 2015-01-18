@@ -2,6 +2,7 @@
 
 // Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
+use UPIICSA\Entities\Page;
 
 class PageTableSeeder extends Seeder {
 
@@ -12,32 +13,22 @@ class PageTableSeeder extends Seeder {
 		 */
 		$pages = [
 			[
-				'name'        => 'home',
-				'app'         => 'apps.home.home',
+				'name'        => 'welcome',
+				'layout'      => 'layouts.upiicsa',
+				'lang'        => 'es-MX',
+				'description' => 'Plataforma de Sociedad, Técnologia y Deontología empleada en la UPICSA con el objetivo de recabar información sobre el trabajo colaborativo de los alumnos con respecto a la relación de cordinación y trabajo en equipo.',
+				'author'      => 'Cristian Jaramillo',
+				'title'       => 'UPICSA - Sociedad, Técnologia y Deontología',
+				'app'         => 'apps.welcome',
 			],
 			[
-				'name'        => 'sing-up',
-				'app'         => 'apps.home.sing-up',
-			],
-			[
-				'name'        => 'users',
-				'app'         => 'apps.home.users',
-			],
-			[
-				'name'        => 'candidatos',
-				'app'         => 'apps.home.users',
-			],
-			[
-				'name'        => 'carrera',
-				'app'         => 'apps.category.default',
-			],
-			[
-				'name'        => 'candidato',
-				'app'         => 'apps.category.user',
-			],
-			[
-				'name'        => 'equipo',
-				'app'         => 'apps.category.team',
+				'name'        => 'team',
+				'layout'      => 'layouts.upiicsa',
+				'lang'        => 'es-MX',
+				'description' => 'Plataforma de Sociedad, Técnologia y Deontología empleada en la UPICSA con el objetivo de recabar información sobre el trabajo colaborativo de los alumnos con respecto a la relación de cordinación y trabajo en equipo.',
+				'author'      => 'Cristian Jaramillo',
+				'title'       => 'UPICSA - Sociedad, Técnologia y Deontología',
+				'app'         => 'apps.team',
 			],
 		];
 

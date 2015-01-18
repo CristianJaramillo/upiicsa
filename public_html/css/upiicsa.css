@@ -1,0 +1,52 @@
+body{
+	background: #292827;
+}
+#upiicsa-logo{
+	margin-top: -4px;
+	width: 246px;
+}
+.bg-register {
+  color: #595C65;
+  background-color: #F8F8F8;
+}
+a.bg-register:hover {
+  background-color: #3071a9;
+}
+.error-message{
+	color: #A32323;
+	font-size: 12px;
+}
+.ipn {
+	margin-left: 0;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+	text-align: left;
+}
+.ipn-title{
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 12px;
+	line-height: normal !important;
+	margin-top: 15.5px;
+	text-align: left;
+}
+.ipn-title span{
+	display: block;
+	font-size: 8px;
+	text-align: right;
+}
+
+.section-heading h1 {
+  color: #FFFFFF;
+  font-family: Rokkitt;
+  font-size: 13em;
+  font-weight: 200;
+  text-shadow: 0.025em 0.025em 0.025em rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+}
+
+@media (max-width:767px){
+	#upiicsa-logo{
+		width: 192px;
+	}
+}
